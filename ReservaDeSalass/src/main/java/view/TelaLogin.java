@@ -20,6 +20,7 @@ public class TelaLogin extends javax.swing.JFrame {
      */
     public TelaLogin() {
         initComponents();
+        botaoOcultarSenha.setIcon(new ImageIcon("C:/Users/devmat/Documents/NetBeansProjects/Sistema-de-reserva-de-sala-SENAI/ReservaDeSalass/src/main/java/img/ocultar.png"));
     }
 
     /**
@@ -43,12 +44,12 @@ public class TelaLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(984, 656));
-        setPreferredSize(new java.awt.Dimension(984, 656));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(984, 656));
         jPanel1.setMinimumSize(new java.awt.Dimension(984, 656));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        campoUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoUsuarioActionPerformed(evt);
@@ -64,6 +65,7 @@ public class TelaLogin extends javax.swing.JFrame {
         senha.setText("Senha");
         jPanel1.add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 60, 30));
 
+        campoSenha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoSenha.setText("jPasswordField1");
         jPanel1.add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 290, 40));
 
@@ -71,13 +73,18 @@ public class TelaLogin extends javax.swing.JFrame {
         botaoLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botaoLogin.setForeground(new java.awt.Color(255, 255, 255));
         botaoLogin.setText("Login");
+        botaoLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoLoginActionPerformed(evt);
+            }
+        });
         jPanel1.add(botaoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 100, 30));
 
         tituloPagina.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         tituloPagina.setText("Bem Vindo!");
         jPanel1.add(tituloPagina, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 210, 50));
 
-        botaoOcultarSenha.setIcon(new javax.swing.ImageIcon("C:\\Users\\devmat\\Desktop\\Arquivos_pg_Loja\\ocultar.png")); // NOI18N
+        botaoOcultarSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mostrar.png"))); // NOI18N
         botaoOcultarSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoOcultarSenhaActionPerformed(evt);
@@ -85,7 +92,7 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         jPanel1.add(botaoOcultarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, 50, 40));
 
-        imagemFundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\devmat\\Desktop\\Design imagem de fundo senai 984x656.png")); // NOI18N
+        imagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Design imagem de fundo senai 984x656.png"))); // NOI18N
         jPanel1.add(imagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,6 +126,10 @@ boolean oculto = true;
             botaoOcultarSenha.setIcon(new ImageIcon("C:/Users/devmat/Documents/NetBeansProjects/Sistema-de-reserva-de-sala-SENAI/ReservaDeSalass/src/main/java/img/ocultar.png"));
         }// fim do else
     }//GEN-LAST:event_botaoOcultarSenhaActionPerformed
+
+    private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoLoginActionPerformed
 
     /**
      * @param args the command line arguments
